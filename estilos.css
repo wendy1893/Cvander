@@ -1,0 +1,88 @@
+body{
+    background: lightblue;
+    margin:0;
+}
+
+.cvanderland{
+    width: 1024px;
+    height: 243px;
+    background-image: url("images/bg-wrapper.png");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    /* background-position: center bottom; /* va a estar alineado horizontalmente en center y en vertical en bottom abajo */
+    /* background-repeat: no-repeat; */
+} 
+
+.cvander{
+    /* background: red; */
+    width: 166px; 
+    height: 171px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: .3s;
+    /* animation: tiempo nombre de la animacion; */
+}
+
+.cvander:hover{
+    /* background: blue; */
+}
+
+.cvander:hover .cvander-head{
+    animation: .5s cvander infinite;
+}
+
+.cvander:hover .cvander-ipad{
+    transform: rotate(-7deg);
+}
+
+.cvander-body{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.cvander-head{
+    position: absolute;
+    left: 0;
+    top: 0; /* no importa si pongo bottom o top porque la caja mide lo mismo que la cabeza y no afecta */
+    /* transition: .3s; ya no usamos esto porque estamos en una animacion*/
+}
+
+.cvander-ipad{
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    transition: .3s;
+}
+
+@keyframes cvander{
+    /* 0% - 50% - 100% */
+    /* from to */
+    /* from{
+        border: 1px solid blue;
+    }
+    to{
+        border: 10px solid green;
+        transform: translateY(5px);
+    } */
+
+    /* 0%{
+
+    } */
+    50%{
+        transform: translateY(5px) rotate(2deg);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
